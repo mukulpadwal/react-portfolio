@@ -15,44 +15,44 @@
     animation-iteration-count: infinite;
     animation-duration: 12s;
     transform-style: preserve-3d;
-    transform-origin: 100px 100px 0;
-    margin-left: calc(50% - 100px);
+    transform-origin: 10rem 10rem 0;
+    margin-left: calc(50% - 10rem);
 
     div {
         position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 1px solid #ccc;
+        width: 20rem;
+        height: 20rem;
+        border: 0.1rem solid #ccc;
         background: rgba(255, 255, 255, 0.4);
-        font-size: 100px;
+        font-size: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 0 20px 0px lightyellow;
+        box-shadow: 0 0 2rem 0rem lightyellow;
     }
 
     .face1 {
-        transform:  translateZ(100px);
+        transform:  translateZ(10rem);
     }
 
     .face2 {
-        transform:  rotateY(90deg) translateZ(100px);
+        transform:  rotateY(90deg) translateZ(10rem);
     }
 
     .face3 {
-        transform:  rotateY(90deg) rotateX(90deg) translateZ(100px);
+        transform:  rotateY(90deg) rotateX(90deg) translateZ(10rem);
     }
 
     .face4 {
-        transform:  rotateY(180deg) rotateZ(90deg) translateZ(100px);
+        transform:  rotateY(180deg) rotateZ(90deg) translateZ(10rem);
     }
 
     .face5 {
-        transform:  rotateY(-90deg) rotateZ(90deg) translateZ(100px);
+        transform:  rotateY(-90deg) rotateZ(90deg) translateZ(10rem);
     }
 
     .face6 {
-        transform:  rotateX(-90deg) translateZ(100px);
+        transform:  rotateX(-90deg) translateZ(10rem);
     }
 }
 
@@ -78,4 +78,36 @@
     83% {
         transform: rotateX(90deg);
     }
+}
+
+@media screen and (max-width: 700px) {
+    .about-page .text-zone p{
+        font-size: 1.9rem;
+        text-align: justify;
+    }
+
+    .about-page h1:before
+    {
+        font-family: 'La Belle Aurore', cursive;
+        color: #ffd700;
+        font-size: 1.8rem;
+        position: absolute;
+        margin-top: -4rem;
+        left: 1.5rem;
+        opacity: 0.6;
+    }
+  
+    .about-page .text-zone {
+      position: absolute;
+      width:90%;
+      transform: none;
+      padding: 0 4rem 0 4rem;
+      box-sizing: border-box;
+      top: 10rem;
+    }
+
+    .cubespinner{
+        display: none;
+    }
+ 
 }

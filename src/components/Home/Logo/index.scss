@@ -1,7 +1,7 @@
 .logo-container {
     z-index: 0;
-    width: 400px;
-    height: 609px;
+    width: 40rem;
+    height: 60.9rem;
     position: absolute;
     top: 10;
     right: 15%;
@@ -22,5 +22,34 @@
         // z-index: 1;
         animation: rotateIn 1s linear both;
         animation-delay: 1.4s;      
+    }
+}
+
+@media(max-width:640px){
+    .logo-container {
+        z-index: 0;
+        width: 40rem;
+        height: 60.9rem;
+        position: absolute;
+        top: 100;
+        right: 15%;
+        bottom: 0;
+        left: auto;
+        margin: auto;
+        opacity: 1;
+    
+        .solid-logo {
+            // position: absolute;
+            // top: auto;
+            // right: auto;
+            // bottom: auto;
+            // left: 0;
+            // margin: auto;
+            width: 50%;
+            // opacity: 1;
+            // z-index: 1;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;      
+        }
     }
 }

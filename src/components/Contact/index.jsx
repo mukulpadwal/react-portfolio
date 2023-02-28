@@ -27,10 +27,14 @@ function Contact() {
     // After creating an account, can find your service ID in the email services tab, your template ID in the email templates tab, and your public key within the Account tab under API Keys.
         emailjs
         .sendForm(
-            'service_4cv5ipb',
-            'template_m3quit9',
+            // 'service_4cv5ipb',
+            // 'template_m3quit9',
+            // refForm.current,
+            // '8RBsHHJ4l6xqzm9uY'
+            process.env.REACT_APP_EMAILJS_SERVICE_ID,
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
             refForm.current,
-            '8RBsHHJ4l6xqzm9uY'
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY
         )
         .then(
             () => {
@@ -39,6 +43,7 @@ function Contact() {
             },
             () => {
                 alert("Failed to send the message, please try again!");
+                window.location.reload(false);
             }
         );
     }
@@ -115,7 +120,7 @@ function Contact() {
                 </div> */}
 
                 <div className='map-wrap'>
-                    <MapContainer center={[32.535062,75.973719]} zoom={13} scrollWheelZoom={false}>
+                    <MapContainer center={[32.535062,75.973719]} zoom={13}>
                         <TileLayer
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />

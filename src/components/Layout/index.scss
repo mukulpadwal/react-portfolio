@@ -6,7 +6,7 @@
 
 .top-tags {
     bottom: auto;
-    top: 35px;
+    top: 3.5rem;
 }
 
 .tags {
@@ -14,20 +14,20 @@
     opacity: 0.6;
     position: absolute;
     bottom: 0;
-    left: 120px;
-    font-size: 18px;
+    left: 12rem;
+    font-size: 1.8rem;
     font-family: 'La Belle Aurore';
 }
 
 .bottom-tag-html{
-    margin-left: -20px;
+    margin-left: -2rem;
 }
 
 .container {
     width: 100%;
     will-change: contents;
     height: 90%;
-    min-height: 566px;
+    min-height: 56.6rem;
     position: absolute;
     opacity: 0;
     top: 5%;
@@ -52,40 +52,40 @@
         max-height: 90%;
 
         h1 {
-            font-size: 53px;
+            font-size: 5.3rem;
             font-family: 'Coolvetica';
             color: #ffd700;
             font-weight: 400;
             margin-top: 0;
             position: relative;
-            margin-bottom: 40px;
-            left: 10px;
+            margin-bottom: 4rem;
+            left: 1rem;
 
             &::before{
                 content: '<h1>';
                 font-family: 'La Belle Aurore';
-                font-size: 18px;
+                font-size: 1.8rem;
                 position: absolute;
-                margin-top: -10px;
-                left: -30px;
+                margin-top: -1rem;
+                left: -3rem;
                 opacity: 0.6;
-                line-height: 18px;
+                line-height: 1.8rem;
             }
     
             &::after{
                 content: '</h1>';
                 font-family: 'La Belle Aurore';
-                font-size: 18px;
+                font-size: 1.8rem;
                 position: absolute;
-                left: -30px;
-                bottom: -20px;
+                left: -3rem;
+                bottom: -2rem;
                 opacity: 0.6;
-                line-height: 18px;
+                line-height: 1.8rem;
             }
         }
 
         p {
-            font-size: 13px;
+            font-size: 1.3rem;
             color: #fff;
             font-family: sans-serif;
             font-weight: 300;
@@ -112,3 +112,4 @@
         }
     }
 }
+
