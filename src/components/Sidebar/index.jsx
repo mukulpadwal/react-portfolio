@@ -3,20 +3,11 @@ import "./index.scss";
 import LogoM from "../../assets/images/logo-m.png";
 import LogoSubtitle from "../../assets/images/logo_sub.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faHashnode, faInstagram, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { Stack } from "@mui/material";
+import { faEnvelope, faEye, faGear, faHome, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faHashnode, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 
-function Sidebar() {
+const Sidebar = () => {
     return (
-        <Stack
-            direction="row"
-            sx={{
-                overflowY: "auto", 
-                height: {sx : "auto", md: "95%"},
-                flexDirection: {md: "column"}
-            }}
-        >
             <div className="nav-bar">
 
                 <Link className="logo" to="/">
@@ -26,6 +17,7 @@ function Sidebar() {
                 <nav>
                     <NavLink
                         exact="true"
+                        className="home-link"
                         activeclassname="active"
                         to="/"
                     >
@@ -90,19 +82,8 @@ function Sidebar() {
                             <FontAwesomeIcon icon={faHashnode} color="#4d4d4e" />
                         </a>
                     </li>
-
-                    {/* <li>
-            <a 
-                target="_blank" 
-                rel='noreferrer' 
-                href='https://www.instagram.com/mukulpadwal/'
-            >
-                <FontAwesomeIcon icon={faInstagram} color="#4d4d4e" />
-            </a>
-        </li> */}
                 </ul>
             </div>
-        </Stack>
     );
 }
 

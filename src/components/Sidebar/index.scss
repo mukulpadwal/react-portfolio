@@ -5,8 +5,6 @@
     position: absolute;
     top: 0;
     z-index: 3;
-    // on smaller screen we dont want to get overflow
-    min-height: 50rem;
 
     .logo {
         display: block;
@@ -109,6 +107,7 @@
         margin: 0;
 
         li {
+            
             a {
                 padding: .7rem 0;
                 display: block;
@@ -121,4 +120,13 @@
             }
         }
     }
+}
+
+@media screen and (max-width: 700px) {
+    .nav-bar{
+        background: #181818;
+        width: 9rem;
+        position: absolute;
+    }
+
 }
