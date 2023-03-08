@@ -14,14 +14,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media(max-width:998px){
-  html{
-    font-size: 55%;
-  }
-}
-
-@media(max-width:768px){
-  html{
-    font-size: 45%;
+@media screen and (max-width:1200px){
+  body{
+    overflow: visible;
   }
 }

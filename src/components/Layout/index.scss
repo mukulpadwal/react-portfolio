@@ -39,17 +39,9 @@
 
 }
 
-.about-page,
-.contact-page {
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 35%;
-        vertical-align: middle;
-        display: table-cell;
-        max-height: 90%;
+.container.about-page,
+.container.contact-page,
+.container.portfolio-page {
 
         h1 {
             font-size: 5.3rem;
@@ -104,6 +96,16 @@
                 animation-delay: 1.3s;
             }
         }
+
+        .text-zone {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35%;
+            vertical-align: middle;
+            display: table-cell;
+            max-height: 90%;
     }
 
     .text-animate-hover {
@@ -112,4 +114,31 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px) {
+    .page {
+        position: initial;
+    }
+
+    .container {
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        &.about-page,
+        &.contact-page,
+        &.portfolio-page {
+
+            .text-zone {
+                position: initial;
+                transform: none;
+                width: 100%;
+                display: block;
+                padding: 2rem;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
 

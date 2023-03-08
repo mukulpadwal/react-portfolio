@@ -27,10 +27,6 @@ function Contact() {
     // After creating an account, can find your service ID in the email services tab, your template ID in the email templates tab, and your public key within the Account tab under API Keys.
         emailjs
         .sendForm(
-            // 'service_4cv5ipb',
-            // 'template_m3quit9',
-            // refForm.current,
-            // '8RBsHHJ4l6xqzm9uY'
             process.env.REACT_APP_EMAILJS_SERVICE_ID,
             process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
             refForm.current,

@@ -42,7 +42,6 @@
         }
 
         img {
-            // display: inline-block;
             width: 3.2rem;
             margin-left: 2rem;
             opacity: 0;
@@ -84,44 +83,33 @@
 }
 
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
 
-    .home-page h1:before
-    {
-        font-family: 'La Belle Aurore', cursive;
-        color: #ffd700;
-        font-size: 1.8rem;
-        // position: absolute;
-        margin-top: -4rem;
-        left: 3rem;
-        opacity: 0.6;
+    .tags,
+    .home-page h1:before,
+    .home-page h1::after {
+        display: none;
     }
+
+    .home-page .text-zone {
+        position: initial;
+        width: 100%;
+        transform: none;
+        padding: .6rem;
+        box-sizing: border-box;
+        
+    } 
 
     .home-page .text-zone h2 {
-        font-size: medium;
-    }
-  
-    .home-page .text-zone {
-      position: absolute;
-      width: 100%;
-      transform: none;
-      padding-left: 5rem;
-      box-sizing: border-box;
-      top: 10rem;
+        font-size:large;
+        text-align: center;
     }
   
     .home-page .flat-button {
-      float: none;
-      display: block;
-      margin: 4rem;
-      width: 12.4rem;
+        float: none;
+        display: block;
+        margin: 2rem auto 0 auto;
+        width: 12.4rem;
     }
-  
-    .logo-container {
-      text-align: center;
-      position: absolute;
-      width: 10rem;
-      top: 60rem;
-      left: 10rem;
-    }  
+
 }

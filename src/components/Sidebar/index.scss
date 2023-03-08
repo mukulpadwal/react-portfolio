@@ -83,6 +83,12 @@
             }
         }
 
+        a.portfolio-link {
+            &:after {
+                content: 'PORTFOLIO';
+            }
+        }
+
         a.contact-link {
             &:after {
                 content: 'CONTACT';
@@ -112,21 +118,70 @@
                 padding: .7rem 0;
                 display: block;
                 font-size: 1.5rem;
-                line-height: 1.6rem;
+                line-height: 1.6rem; 
+            }
 
-                &:hover svg {
-                    color: #ffd700;
-                }
+            &:hover svg {
+                color: #ffd700;
             }
         }
     }
 }
 
-@media screen and (max-width: 700px) {
-    .nav-bar{
-        background: #181818;
-        width: 9rem;
-        position: absolute;
-    }
+.hamburger-icon,
+.close-icon {
+    display: none;
+}
 
+@media screen and (max-width:1200px){
+    .nav-bar {
+        background: transparent;
+        position: initial;
+        height: auto;
+        min-height: auto;
+
+        ul, nav {
+            display: none;
+        }
+
+        nav {
+            width: 100%;
+            height: 100%;
+            background: #181818;
+            top: 0;
+            left: 0;
+            position: fixed;
+            z-index: 2;
+            margin: 0;
+
+            a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            a:after {
+                opacity: 1;
+                position: initial;
+                width: auto;
+                margin-left: 1rem;
+            }
+
+            a svg {
+                opacity: 1 !important;
+            }
+
+            &.mobile-show {
+                display: block;
+            }
+        }
+
+        .hamburger-icon,
+        .close-icon {
+            display: block;
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+        }
+    }
 }

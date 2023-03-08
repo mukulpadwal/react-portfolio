@@ -1,0 +1,18 @@
+{
+    "portfolio": [
+        {
+            "cover": "/portfolios/uViewTube/uViewTube.png",
+            "title": "uViewTube",
+            "description": "React, JSX, Tailwind, RapidAPI",
+            "url": "https://uviewtube.netlify.app",
+            "github": "https://github.com/mukulpadwal/uViewTube"
+        },
+        {
+            "cover": "/portfolios/RevisionPlanner/RevisionPlanner.jpg",
+            "title": "1247 Revision Planner",
+            "description": "Kotlin, Android Developmemt",
+            "url": "https://github.com/gsamansharma/1247-Revision-Planner/blob/master/release/1247-Revision-Planner.apk?raw=true",
+            "github": "https://github.com/mukulpadwal/1247-Revision-Planner"
+        }
+    ]
+}
