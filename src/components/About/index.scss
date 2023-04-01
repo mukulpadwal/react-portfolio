@@ -9,6 +9,13 @@
     overflow: hidden;
 }
 
+.about-page .text-zone {
+    
+    p {
+        font-size: 1.6rem;
+    }
+}
+
 .cubespinner {
     animation-name: spincube;
     animation-timing-function: ease-in-out;

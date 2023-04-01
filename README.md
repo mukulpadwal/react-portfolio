@@ -1,3 +1,13 @@
+# Portfolio Website [MukulPadwal](https://mukulpadwal.netlify.app/)
+
+This portfolio website project is built using a combination of ReactJs, MaterialUI, EmailJs, and HTML/CSS/JS, providing a highly customizable and interactive experience for visitors.
+
+MaterialUI is used for the website's visual design, providing a sleek and modern look and feel. ReactJs is used for the website's dynamic and responsive user interface, while EmailJs is used for the website's contact form functionality
+
+HTML, CSS, and JS are used to create custom animations, transitions, and effects, giving the website a unique and engaging design. This allows visitors to interact with the website in a meaningful way, making it easy to navigate and explore.
+
+The website is deployed using Netlify, providing fast and reliable hosting services.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
