@@ -31,7 +31,7 @@ const Portfolio = () => {
     }
 
     // portfolio[0]._document.data.value.mapValue.fields;
-    // console.log(portfolio);
+    console.log(portfolio);
 
     function renderPortfolio(portfolio){
         return (

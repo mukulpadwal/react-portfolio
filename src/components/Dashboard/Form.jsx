@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { auth, storage, db } from "../../firebase";
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
-import { addDoc } from "firebase/firestore/lite";
-import { collection } from "firebase/firestore/lite";
+import { addDoc } from "firebase/firestore";
+import { collection } from "firebase/firestore";
 
 const Form = () => {
 
@@ -49,7 +49,7 @@ const Form = () => {
                     cover: null
                 })
             })
-        
+
     }
 
     const savePortfolio = async (portfolio) => {
@@ -57,6 +57,7 @@ const Form = () => {
             await addDoc(collection(db, 'portfolio'), portfolio);
             window.location.reload(false);
         } catch (error) {
+            console.log(error);
             alert('failed to add portfolio');
         }
     }
@@ -68,7 +69,7 @@ const Form = () => {
                 <p><textarea placeholder="Description" /></p>
                 <p><input type="text" placeholder="URL" /></p>
                 <p><input type="text" placeholder="Github repo url" /></p>
-                <p><input type="file" placeholder="Image" /></p>
+                <p><input type="file" placeholder="Image in png format" /></p>
                 <button type="submit">Submit</button>
                 <button onClick={() => auth.signOut()}>Sign Out</button>
             </form>

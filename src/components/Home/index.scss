@@ -71,6 +71,7 @@
         padding: 1rem 1.8rem;
         border: .1rem solid #ffd700;
         margin-top: 2.5rem;
+        margin-right: 1rem;
         float: left;
         animation: fadeIn 1s 1.8s backwards;
         white-space: nowrap;
@@ -108,8 +109,9 @@
     .home-page .flat-button {
         float: none;
         display: block;
-        margin: 2rem auto 0 auto;
-        width: 12.4rem;
+        margin: 1.5rem auto 0 auto;
+        // width: 12.4rem;
+        width: max-content;
     }
 
 }

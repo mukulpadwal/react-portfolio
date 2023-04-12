@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
+import Typewriter from "typewriter-effect";
 
 const About = () => {
 
@@ -23,20 +24,34 @@ const About = () => {
             <div className='container about-page'>
                 <div className='text-zone'>
                     <h1>
-                        <AnimatedLetters 
+                        <AnimatedLetters
                             letterClass={letterClass}
-                            strArray = {aboutArr}
-                            index = {15}
+                            strArray={aboutArr}
+                            index={15}
                         />
                     </h1>
-                    <p>
-                    Hello, my name is Mukul Padwal, and I am a fresher software engineer with experience in the <strong>MERN Stack</strong>, <strong>Java</strong>, Python, MySQL, Linux.</p>
 
-                    <p>
-                    I have always been fascinated by technology and how it can solve real-world problems. This passion led me to pursue a degree in computer science, and I'm excited to be starting my career in software engineering. I enjoy the challenge of writing code and finding elegant solutions to complex problems.
-                    </p>
-                    
-                    <p> I am skilled in developing web applications, creating responsive designs, and implementing RESTful APIs. I also possess a good understanding of database management and have experience working with SQL and NoSQL databases. I am a quick learner and thrive in team environments. I am excited to utilize my skills and contribute to the success of any team that I am a part of.
+                    <p id='about-content'>
+                        {/* <Typewriter
+                            onInit={(typewriter) => {
+                                typewriter
+                                    .changeDelay(15)
+                                    .typeString(`Hello, my name is Mukul Padwal, and I am a fresher software engineer with experience in the <strong>MERN Stack</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>MySQL</strong>, <strong>Linux</strong>.<br /><br />`)
+                                    .typeString(`I have always been fascinated by technology and how it can solve real-world problems. This passion led me to pursue a degree in computer science, and I'm excited to be starting my career in software engineering. I enjoy the challenge of writing code and finding elegant solutions to complex problems.<br /><br />`)
+                                    .typeString(`I am skilled in developing <strong>web applications</strong>, creating <strong>responsive designs</strong>, and implementing <strong>RESTful APIs</strong>. I also possess a good understanding of database management and have experience working with <strong>SQL</strong> and <strong>NoSQL</strong> databases. I am a quick learner and thrive in team environments. I am excited to utilize my skills and contribute to the success of any team that I am a part of.`)
+                                    .start()
+                            }}
+                        /> */}
+
+                        <p>My name is Mukul Padwal and I'm a fresher software engineer.</p>
+                        <p>Experienced in <strong>MERN Stack</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>MySQL</strong>, and <strong>Linux.</strong></p>
+                        <p>Holds a degree in computer science.</p>
+                        <p>Skilled in developing web applications and creating responsive designs.</p>
+                        <p>Experienced in implementing RESTful APIs.</p>
+                        <p>Possesses a good understanding of database management, including SQL and NoSQL databases.</p>
+                        <p>Thrives in team environments and is a quick learner.</p>
+                        <p>Excited to contribute to the success of any team I'm a part of.</p>
+
                     </p>
                 </div>
 
@@ -63,7 +78,7 @@ const About = () => {
                     </div>
                 </div>
             </div>
-            <Loader type='pacman'/>
+            <Loader type='pacman' />
         </div>
     );
 }

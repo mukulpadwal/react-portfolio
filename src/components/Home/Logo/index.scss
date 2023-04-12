@@ -29,13 +29,22 @@
 
     .logo-container{
         width: 25rem;
-        height: auto;
-        top: auto;
+        // height: auto;
         bottom: auto;
         left: 0;
         right: 0;
         box-sizing: border-box;
         margin: auto;
+
+        .solid-logo {
+            position: absolute;
+            top: auto;
+            width: 75%;
+            opacity: 1;
+            z-index: 1;
+            animation: rotateIn 1s linear both;
+            animation-delay: 1.4s;      
+        }
     }
 
 }
