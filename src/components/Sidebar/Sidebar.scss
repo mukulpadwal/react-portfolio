@@ -1,3 +1,5 @@
+// Note : 1rem = 10px
+
 .nav-bar {
     background: #181818;
     width: 6rem;
@@ -16,43 +18,42 @@
             width: 4rem;
             height: auto;
 
-            &.sub-logo{
+            &.sub-logo {
                 width: 5rem;
             }
         }
-    
+
     }
 
     nav {
         display: block;
         text-align: center;
-        position: absolute;
-        height: 21rem;
-        top: 5rem;
+        position: relative;
         margin-top: 12rem;
         width: 100%;
 
-        a{
+        // These a are referring to the NavLink tags
+        a {
             font-size: 2.2rem;
             color: #4d4d4e;
             display: block;
             line-height: 5.1rem;
-            height: 5.1rem;
             position: relative;
             text-decoration: none;
 
+            // These i is referring to FontAwesome icon
             i {
                 transition: all 0.3s ease-out;
             }
 
-            &:hover{
+            &:hover {
                 color: #ffd700;
 
                 svg {
                     opacity: 0;
                 }
 
-                &:after{
+                &:after {
                     opacity: 1;
                 }
             }
@@ -70,8 +71,8 @@
                 transition: all 0.3s ease-out;
             }
 
-            &:first-child{
-                &::after{
+            &:first-child {
+                &::after {
                     content: 'HOME';
                 }
             }
@@ -89,13 +90,19 @@
             }
         }
 
+        a.blog-link {
+            &::after {
+                content: 'BLOG';
+            }
+        }
+
         a.contact-link {
             &:after {
                 content: 'CONTACT';
             }
         }
 
-        a.active{
+        a.active {
             svg {
                 color: #ffd700;
             }
@@ -113,12 +120,12 @@
         margin: 0;
 
         li {
-            
+
             a {
                 padding: .7rem 0;
                 display: block;
                 font-size: 1.5rem;
-                line-height: 1.6rem; 
+                line-height: 1.6rem;
             }
 
             &:hover svg {
@@ -128,19 +135,25 @@
     }
 }
 
+// On larger screen we don't want to show the hamburger icon
 .hamburger-icon,
 .close-icon {
     display: none;
 }
 
-@media screen and (max-width:1200px){
+
+// Optimisation for msmaller devices
+// max-width: 1200px means devices whose width is smaller than or equal to 1200px these styles should be applied to those
+@media screen and (max-width:1200px) {
     .nav-bar {
+        display: block;
         background: transparent;
         position: initial;
         height: auto;
         min-height: auto;
 
-        ul, nav {
+        ul,
+        nav {
             display: none;
         }
 
@@ -159,7 +172,7 @@
                 justify-content: center;
                 align-items: center;
             }
-    
+
             a:after {
                 opacity: 1;
                 position: initial;
@@ -172,7 +185,7 @@
             }
 
             &.mobile-show {
-                display: block;
+                display: block; 
             }
         }
 

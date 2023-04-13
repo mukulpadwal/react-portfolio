@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { auth, storage, db } from "../../firebase";
+import { auth, storage, db } from "../../api/firebase";
 import { getDownloadURL, ref, uploadBytes } from 'firebase/storage';
 import { addDoc } from "firebase/firestore";
 import { collection } from "firebase/firestore";

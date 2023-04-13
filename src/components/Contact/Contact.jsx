@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Loader from 'react-loaders';
-import AnimatedLetters from "../AnimatedLetters";
-import './index.scss';
+import AnimatedLetters from "../AnimatedLetters/AnimatedLetters";
+import './Contact.scss';
 import emailjs from '@emailjs/browser';
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
@@ -10,8 +10,7 @@ function Contact() {
     const [letterClass, setLetterClass] = useState('text-animate');
     const refForm = useRef();
 
-    const contactStr = "Contact Me";
-    const contactArr = contactStr.split("");
+    const contactArr = "Contact Me".split("");
 
     useEffect(function () {
         setTimeout(function () {
@@ -45,10 +44,10 @@ function Contact() {
     }
 
     // console.log(process.env.REACT_APP_MAP_API_KEY);
-    const position = [ 32.539555, 75.970955];
+    const position = [32.539555, 75.970955];
 
     return (
-        <>
+        <div>
             <div className='container contact-page'>
                 <div className='text-zone'>
                     <h1>
@@ -133,7 +132,7 @@ function Contact() {
                 </div>
             </div>
             <Loader type='pacman' />
-        </>
+        </div>
     );
 }
 

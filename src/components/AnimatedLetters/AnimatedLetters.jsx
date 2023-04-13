@@ -1,4 +1,4 @@
-import './index.scss';
+import './AnimatedLetters.scss';
 
 function AnimatedLetters(props){
     return (

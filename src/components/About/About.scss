@@ -9,10 +9,8 @@
     overflow: hidden;
 }
 
-.about-page .text-zone {    
-    p {
-        font-size: 1.7rem;
-    }
+.about-page .text-zone p {
+    font-size: 1.75rem;
 }
 
 .cubespinner {
@@ -38,49 +36,55 @@
     }
 
     .face1 {
-        transform:  translateZ(10rem);
+        transform: translateZ(10rem);
     }
 
     .face2 {
-        transform:  rotateY(90deg) translateZ(10rem);
+        transform: rotateY(90deg) translateZ(10rem);
     }
 
     .face3 {
-        transform:  rotateY(90deg) rotateX(90deg) translateZ(10rem);
+        transform: rotateY(90deg) rotateX(90deg) translateZ(10rem);
     }
 
     .face4 {
-        transform:  rotateY(180deg) rotateZ(90deg) translateZ(10rem);
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(10rem);
     }
 
     .face5 {
-        transform:  rotateY(-90deg) rotateZ(90deg) translateZ(10rem);
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(10rem);
     }
 
     .face6 {
-        transform:  rotateX(-90deg) translateZ(10rem);
+        transform: rotateX(-90deg) translateZ(10rem);
     }
 }
 
 @keyframes spincube {
+
     from,
     to {
         // This is starting point of our animation
         transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
     }
-    16% { 
+
+    16% {
         // on 16th % of our animation
         transform: rotateY(-90deg);
     }
+
     33% {
         transform: rotateY(-90deg) rotateZ(90deg);
     }
+
     50% {
         transform: rotateY(-180deg) rotateZ(90deg);
     }
+
     66% {
-       transform: rotateY(-270deg) rotateZ(90deg);
+        transform: rotateY(-270deg) rotateZ(90deg);
     }
+
     83% {
         transform: rotateX(90deg);
     }
@@ -94,5 +98,5 @@
         height: 0%;
         overflow: visible;
     }
- 
+
 }

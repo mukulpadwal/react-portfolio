@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 import Form from "./Form.jsx";
-import Login from "../Login/index.jsx";
+import Login from "../Login/Login.jsx";
 
 const Dashboard = () => {
 

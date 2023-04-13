@@ -3,15 +3,15 @@ import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
-import AnimatedLetters from '../AnimatedLetters';
-import './index.scss';
+import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import './About.scss';
 import Typewriter from "typewriter-effect";
 
 const About = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
-    const aboutStr = "About Me";
-    const aboutArr = aboutStr.split("");
+    
+    const aboutArr = "About Me".split("");
 
     useEffect(() => {
         setTimeout(() => {
@@ -45,10 +45,10 @@ const About = () => {
 
                         <p>My name is Mukul Padwal and I'm a fresher software engineer.</p>
                         <p>Experienced in <strong>MERN Stack</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>MySQL</strong>, and <strong>Linux.</strong></p>
-                        <p>Holds a degree in computer science.</p>
-                        <p>Skilled in developing web applications and creating responsive designs.</p>
-                        <p>Experienced in implementing RESTful APIs.</p>
-                        <p>Possesses a good understanding of database management, including SQL and NoSQL databases.</p>
+                        <p>Holds a Degree in <strong>Computer Science</strong>.</p>
+                        <p>Skilled in developing <strong>web applications</strong> and creating <strong>responsive designs</strong>.</p>
+                        <p>Experienced in implementing <strong>RESTful APIs</strong>.</p>
+                        <p>Possesses a good understanding of database management, including <strong>SQL</strong> and <strong>NoSQL</strong> databases.</p>
                         <p>Thrives in team environments and is a quick learner.</p>
                         <p>Excited to contribute to the success of any team I'm a part of.</p>
 

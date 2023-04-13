@@ -1,4 +1,4 @@
-import './index.scss';
+import './Logo.scss';
 import LogoS from "../../../assets/images/logo-m.png";
 
 function Logo(){
