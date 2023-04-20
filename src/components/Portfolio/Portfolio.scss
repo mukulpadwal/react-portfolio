@@ -1,180 +1,126 @@
-.portfolio-page{
-    padding-left: 10rem;
-    padding-right: 5rem;
+.container.portfolio-page {
 
-    width: calc(100% - 15rem);
-
-    position: initial;
-    height: 100%;
-    overflow: auto;
-
-    h1.page-title {
-        margin-left: 10rem;
-        margin-top: 10rem;
+    .text-zone {
+        width: 75% !important;
+        overflow-y: scroll;
     }
 
-    .images-container {
+    .text-zone::-webkit-scrollbar {
+        display: none;
+    }
+
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+div.portfolio-box {
+    border: 1px solid rgba(0, 162, 255, 0.279);
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 20%;
+    background-color: transparent;
+    border-radius: 3rem;
+    padding: 1rem;
+    background-color: rgba(134, 125, 125, 0.341);
+
+    h2 {
+        font-size: 2rem;
+        color: black;
+    }
+
+    p {
+        margin-top: 0;
+        font-size: 1.4rem;
+        animation: none;
+    }
+
+    .btn-container {
         display: flex;
-        gap: 1.5rem;
-        flex-wrap: wrap;
-        padding-bottom: 10rem;
-    }
-
-    .image-box {
-        position: relative;
-        flex: 1 1 20%;
-        height: 40rem;
-        overflow: hidden;
-        border-radius: 1rem;
-        max-width: calc(25% - 1rem);
-
-        .portfolio-image {
-            position: absolute;
-            z-index: 2;
-            object-fit: cover;
-        }
-    
-        .content {
-            // Positioning it as absolute bcs we want to apply some hover effects
-            position: absolute;
-            width: 100%;
-            z-index: 3;
-            padding: 1rem 2rem;
-            transition: all 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
-            background: linear-gradient(
-                180deg,
-                rgba(0,0,0,0.2) 0,
-                rgba(0,0,0,1)
-    
-            );
-            bottom: -7rem;
-        }
-
-        .title {
-            margin-bottom: 0;
-            margin-top: 0;
-            color: #fff;
-            font-size: 2.4rem;
-            font-weight: 500;
-            line-height: 2.4rem;
-        }
-
-        .description {
-            font-size: 1.4rem;
-            margin-bottom: .5rem;
-            color: #fff;
-            font-weight: 700;
-        }
+        justify-content: space-between;
+        align-items: center;
 
         .btn {
-            margin: 3rem 1rem 1rem 1rem;
+            margin: 2px;
             padding: 0 2.3rem;
             height: 4rem;
-            line-height: 3.4rem;
             border: .2rem solid #ffd700;
             border-radius: .4rem;
-            font-size: 1.4rem;
             color: #fff;
             background: transparent;
             text-transform: uppercase;
             font-weight: 100;
-            transition: all 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
-            cursor: pointer;       
+            cursor: pointer;
         }
-
-        .btn:hover {
-            transform: translateY(-.3rem);
-            background: #ffd700;
-        }
-
-        &::after {
-            content: "";
-            background: linear-gradient(180deg, #ffd700, #000);
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            transition: all 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
-            opacity: 0;
-        }
-
-        &:hover::after {
-            opacity: 0.85;
-        }
-
-        &:hover .content {
-            bottom: 0;
-            background: transparent;
-        }
-
     }
-    
+
 }
 
-@media screen and (max-width: 1200px){
+div.portfolio-box img {
+    max-width: 100%
+}
+
+@media screen and (max-width: 1200px) {
 
     .container.portfolio-page {
         width: 100%;
-        padding: 2rem;
-        box-sizing: border-box;
 
-        .images-container {
+        .text-zone {
+            width: 100% !important;
+        }
+
+        .portfolio-container {
+            width: 100%;
             display: flex;
-            gap: 1.5rem;
             flex-wrap: wrap;
-            padding-bottom: 10rem;
-        }
 
-        .images-container > div {
-            flex: 50%;
-        }
+            .portfolio-box {
+                flex: 50%;
+                background-color: rgba(134, 125, 125, 0.341);
 
-        h1.page-title {
-            margin-left: 2rem;
-            margin-top: 2rem;
-        }
+                h2 {
+                    font-size: 2rem;
+                    color: black;
+                }
 
-        .image-box {
-            height: 40rem;
-            max-width: calc(50% - 1rem);
+                p {
+                    margin-top: 0;
+                    font-size: 1.4rem;
+                    animation: none;
+                }
 
-            .title {
-                margin: auto;
-                color: #ffffff;
-                font-size: 2rem;
-                font-weight: 700;
-                line-height: 2.4rem;
-            }
-
-            .description {
-                display:flex;
-                margin: 1rem;
-                font-size: 1.6rem;
-                color: #fff;
-                font-weight: 700;
-            }
-
-            .btn {
-                margin: 2rem 2rem 1rem 1rem;
-                padding: 0 1rem;
-                height: 3.1rem;
-                line-height: 3.4rem;
-                border: .2rem solid #ffd700;
-                border-radius: .4rem;
-                font-size: 1.4rem;
-                color: #fff;
-                background: transparent;
-                text-transform: uppercase;
-                font-weight: 100;
-                transition: all 0.3 cubic-bezier(0.075, 0.82, 0.165, 1);
-                cursor: pointer;       
+                .btn-container {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+            
+                    .btn {
+                        margin: 2px;
+                        padding: 0 2.3rem;
+                        height: 4rem;
+                        border: .2rem solid #ffd700;
+                        border-radius: .4rem;
+                        color: #fff;
+                        background: transparent;
+                        text-transform: uppercase;
+                        font-weight: 100;
+                        cursor: pointer;
+                    }
+                }
             }
         }
+
     }
 }
-
-

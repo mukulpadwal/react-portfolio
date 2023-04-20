@@ -23,6 +23,7 @@ const Blog = () => {
             .then((response) => setFetchedBlogs(response.data.user.publication.posts))
             .catch((error) => console.log(error));
 
+
     }, []);
 
     return (

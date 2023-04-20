@@ -21,13 +21,13 @@
         opacity: 1;
         z-index: 1;
         animation: rotateIn 1s linear both;
-        animation-delay: 1.4s;      
+        animation-delay: 1.4s;
     }
 }
 
 @media screen and (max-width: 1200px) {
 
-    .logo-container{
+    .logo-container {
         width: 25rem;
         // height: auto;
         bottom: auto;
@@ -38,17 +38,15 @@
 
         .solid-logo {
             position: absolute;
-            top: auto;
+            top: 8rem;
+            left: 0;
+            right: 0;
             width: 75%;
             opacity: 1;
             z-index: 1;
             animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;      
+            animation-delay: 1.4s;
         }
     }
 
 }
-
-  
-
-  

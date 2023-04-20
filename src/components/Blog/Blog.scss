@@ -34,6 +34,7 @@ div.blog {
     border-radius: 3rem;
     padding: 1rem;
     background-color: rgba(134, 125, 125, 0.341);
+    cursor: pointer;
 
     h2{
         font-size: 2rem;
@@ -44,12 +45,17 @@ div.blog {
         margin-top: 0;
         font-size: 1.4rem;
         animation: none;
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: bold;
+        }
     }
 }
 
 div.blog img {
-    max-width: 100%
-    
+    max-width: 100% 
 }
 
 
@@ -62,17 +68,11 @@ div.blog img {
         }
 
         .blog-container{
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
+            
 
             .blog {
                 flex: 50%;                
                 background-color: rgba(134, 125, 125, 0.341);
-
-                img {
-                    
-                }
 
                 h2{
                     font-size: 2rem;
@@ -83,7 +83,14 @@ div.blog img {
                     margin-top: 0;
                     font-size: 1.4rem;
                     animation: none;
+
+                    a {
+                        text-decoration: none;
+                        color: aliceblue;
+                    }
                 }
+
+                
             }
         }
     }

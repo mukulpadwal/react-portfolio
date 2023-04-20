@@ -5,12 +5,11 @@ import { useEffect, useState } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import './About.scss';
-import Typewriter from "typewriter-effect";
 
 const About = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
-    
+
     const aboutArr = "About Me".split("");
 
     useEffect(() => {
@@ -32,16 +31,6 @@ const About = () => {
                     </h1>
 
                     <p id='about-content'>
-                        {/* <Typewriter
-                            onInit={(typewriter) => {
-                                typewriter
-                                    .changeDelay(15)
-                                    .typeString(`Hello, my name is Mukul Padwal, and I am a fresher software engineer with experience in the <strong>MERN Stack</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>MySQL</strong>, <strong>Linux</strong>.<br /><br />`)
-                                    .typeString(`I have always been fascinated by technology and how it can solve real-world problems. This passion led me to pursue a degree in computer science, and I'm excited to be starting my career in software engineering. I enjoy the challenge of writing code and finding elegant solutions to complex problems.<br /><br />`)
-                                    .typeString(`I am skilled in developing <strong>web applications</strong>, creating <strong>responsive designs</strong>, and implementing <strong>RESTful APIs</strong>. I also possess a good understanding of database management and have experience working with <strong>SQL</strong> and <strong>NoSQL</strong> databases. I am a quick learner and thrive in team environments. I am excited to utilize my skills and contribute to the success of any team that I am a part of.`)
-                                    .start()
-                            }}
-                        /> */}
 
                         <p>My name is Mukul Padwal and I'm a fresher software engineer.</p>
                         <p>Experienced in <strong>MERN Stack</strong>, <strong>Java</strong>, <strong>Python</strong>, <strong>MySQL</strong>, and <strong>Linux.</strong></p>
