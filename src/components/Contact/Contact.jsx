@@ -105,7 +105,7 @@ function Contact() {
                     </div>
                 </div>
 
-                <div className='info-map'>
+                {/* <div className='info-map'>
                     Mukul Padwal
                     <br />
                     India
@@ -115,7 +115,7 @@ function Contact() {
                     176304
                     <br />
                     <span>mukulpadwal786@gmail.com</span>
-                </div>
+                </div> */}
 
                 <div className='map-wrap'>
                     <MapContainer className="leaflet-conatiner" center={position} zoom={13} scrollWheelZoom={false}>
@@ -123,11 +123,11 @@ function Contact() {
                             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                         />
-                        <Marker position={position}>
+                        {/* <Marker position={position}>
                             <Popup>
                                 Mukul lives here <br /> Come have a visit.
                             </Popup>
-                        </Marker>
+                        </Marker> */}
                     </MapContainer>
                 </div>
             </div>
