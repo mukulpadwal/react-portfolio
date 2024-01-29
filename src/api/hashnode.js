@@ -4,32 +4,40 @@
 // query
 // variables
 
-export const gql = async (query, variables = {}) => {
-    const data = await fetch(`https://api.hashnode.com/`, {
-        method: 'POST',
-        headers: {
-            'Content-type': 'application/json',
-        },
-        body: JSON.stringify({
-            query,
-            variables
-        })
-    });
+export const gql = async (query) => {
+  const data = await fetch(`https://gql.hashnode.com`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      query,
+    }),
+  })
 
-    return data.json();
+  return data.json()
 }
 
 export const GET_USER_ARTICLES = `
-    query GetUserArticles($page: Int!) {
-        user(username: "mukulpadwal") {
-            publication {
-                posts(page: $page) {
-                    title
-                    brief
-                    slug
-                    coverImage
-                }
-            }
+query Publication {
+    publication(host: "mukulpadwal.hashnode.dev") {
+      posts(first:20){
+        edges {
+          node {
+            id,
+            slug,
+            title,
+            url,
+            cuid,
+            coverImage {
+              url
+            },
+            brief,
+            readTimeInMinutes,
+            publishedAt
+          }
         }
+      }
     }
-`;
+  }
+`

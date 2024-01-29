@@ -8,9 +8,6 @@ const Blog = () => {
 
     const [letterClass, setLetterClass] = useState('text-animate');
     const [fetchedBlogs, setFetchedBlogs] = useState([]);
-    const [fetchedBlogs1, setFetchedBlogs1] = useState([]);
-
-    let blogs = [];
 
     const blogArr = "Blogs".split("");
 
@@ -22,20 +19,12 @@ const Blog = () => {
 
     useEffect(() => {
 
-        gql(GET_USER_ARTICLES, { page: 0 })
-            .then((response) => setFetchedBlogs(response.data.user.publication.posts))
-            .catch((error) => console.log(error));
-
-        gql(GET_USER_ARTICLES, { page: 1 })
-            .then((response) => setFetchedBlogs1(response.data.user.publication.posts))
-            .catch((error) => console.log(error));
-
+        gql(GET_USER_ARTICLES)
+            .then((response) => setFetchedBlogs(response.data.publication.posts.edges))
+            .catch((error) => console.log(error.message));
     }, []);
 
-    
-    blogs = [...fetchedBlogs, ...fetchedBlogs1];
-
-    console.log(blogs);
+    console.log(fetchedBlogs);
 
     return (
         <div>
@@ -51,12 +40,12 @@ const Blog = () => {
 
                     <div className="blog-container">
                         {
-                            blogs.map((blog, idx) => {
+                            fetchedBlogs.map((blog, idx) => {
                                 return (
                                     <div className="blog" key={idx}>
-                                        <img alt="blog-img" src={blog.coverImage} />
-                                        <h2>{blog.title}</h2>
-                                        <p>{blog.brief} <a href={`https://mukulpadwal.hashnode.dev/${blog.slug}`}>Read More</a></p>
+                                        <img alt="blog-img" src={blog.node.coverImage.url} />
+                                        <h2>{blog.node.title}</h2>
+                                        <p>{blog.node.brief} <a href={`https://mukulpadwal.hashnode.dev/${blog.node.slug}`}>Read More</a></p>
                                     </div>
                                 );
                             })
